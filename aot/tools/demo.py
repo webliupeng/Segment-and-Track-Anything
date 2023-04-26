@@ -159,7 +159,7 @@ def demo(cfg):
                                     num_workers=cfg.TEST_WORKERS,
                                     pin_memory=True)
 
-        fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
         output_video_path = os.path.join(
             output_root, '{}_{}fps.avi'.format(seq_name, video_fps))
 
