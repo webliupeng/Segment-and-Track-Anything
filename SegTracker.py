@@ -219,6 +219,7 @@ class SegTracker():
 
         # get annotated_frame and boxes
         annotated_frame, boxes = self.detector.run_grounding(origin_frame, grounding_caption, box_threshold, text_threshold)
+        refined_merged_mask = None
         for i in range(len(boxes)):
             bbox = boxes[i]
             interactive_mask = self.sam.segment_with_box(origin_frame, bbox)[0]
